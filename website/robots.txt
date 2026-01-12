@@ -1,0 +1,42 @@
+# robots.txt for BetterSeason Website
+# Allows search engines to crawl and index the website
+
+User-agent: *
+Allow: /
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+Disallow: 
+
+# Sitemap location
+Sitemap: https://betterseason-plugin.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
