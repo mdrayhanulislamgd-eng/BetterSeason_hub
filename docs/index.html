@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetterSeason - Advanced Realistic Seasons Plugin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                🌍 BetterSeason
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#systems" class="nav-link">Systems</a></li>
+                <li class="nav-item"><a href="#commands" class="nav-link">Commands</a></li>
+                <li class="nav-item"><a href="#installation" class="nav-link">Installation</a></li>
+                <li class="nav-item"><a href="#config" class="nav-link">Config</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">BetterSeason</h1>
+            <p class="hero-subtitle">Advanced Realistic Seasons Plugin for Minecraft</p>
+            <p class="hero-description">
+                A comprehensive Paper plugin (v1.21.8) that brings realistic seasonal effects, 
+                advanced temperature systems, and dynamic calendar features to your server.
+            </p>
+            <div class="hero-buttons">
+                <a href="#installation" class="btn btn-primary">Get Started</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="plugin-info">
+                <span class="badge">Author: epic_boat</span>
+                <span class="badge">Version: 1.0.0</span>
+                <span class="badge">MC: 1.21.8</span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="logo-hero.svg" alt="BetterSeason - Advanced Realistic Seasons" class="hero-logo">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Core Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Seasonal System</h3>
+                <p>4 distinct seasons with realistic temperature ranges and biome-specific visual changes. Each season brings unique particle effects and gameplay modifications.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Advanced Calendar</h3>
+                <p>Realistic day/night cycles, customizable months, real-world time sync, and week day tracking with PlaceholderAPI support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌡️</div>
+                <h3>Temperature System</h3>
+                <p>10 different temperature modifiers including season, biome, weather, height, lighting, armor, and more.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌾</div>
+                <h3>Crop Growth</h3>
+                <p>Seasonal modifiers affect crop growth rates. Greenhouse support with optimal growing conditions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Visual Effects</h3>
+                <p>Autumn soil painting, winter world effects, canopy snow, fast leaf decay, and seasonal flora changes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧬</div>
+                <h3>Biome System</h3>
+                <p>Biome spoofing for seasonal transformations with backup store, spawn guards, and dynamic vegetation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Systems Section -->
+    <section id="systems" class="systems">
+        <h2>Advanced Systems</h2>
+        
+        <!-- Seasonal System -->
+        <div class="system-card">
+            <div class="system-header">
+                <h3>🌍 Seasonal System</h3>
+            </div>
+            <div class="system-content">
+                <div class="seasons-gallery">
+                    <div class="season-card-img">
+                        <img src="season-spring.svg" alt="Spring Season - Cherry Blossoms" class="season-img">
+                        <p><strong>Spring</strong><br>5-23°C<br>🌸 Growth & Renewal</p>
+                    </div>
+                    <div class="season-card-img">
+                        <img src="season-summer.svg" alt="Summer Season - Hot Weather" class="season-img">
+                        <p><strong>Summer</strong><br>25-40°C<br>☀️ Peak Growth</p>
+                    </div>
+                    <div class="season-card-img">
+                        <img src="season-autumn.svg" alt="Autumn Season - Falling Leaves" class="season-img">
+                        <p><strong>Autumn</strong><br>5-25°C<br>🍂 Harvest Time</p>
+                    </div>
+                    <div class="season-card-img">
+                        <img src="season-winter.svg" alt="Winter Season - Snow and Ice" class="season-img">
+                        <p><strong>Winter</strong><br>-10-5°C<br>❄️ Dormancy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Temperature System -->
+        <div class="system-card">
+            <div class="system-header">
+                <h3>🌡️ Temperature Calculation</h3>
+            </div>
+            <div class="system-content">
+                <div class="system-image">
+                    <img src="temperature-system.svg" alt="Temperature System with 10 Modifiers" class="system-diagram">
+                </div>
+                <p><strong>How It Works:</strong></p>
+                <ol class="modifier-list">
+                    <li><strong>Season</strong> - Base temperature per season</li>
+                    <li><strong>Biome</strong> - Biome-specific variations</li>
+                    <li><strong>Time of Day</strong> - Warmer day, colder night</li>
+                    <li><strong>Weather</strong> - Rain/storms reduce temperature</li>
+                    <li><strong>Height (Y-level)</strong> - Temperature decreases with altitude</li>
+                    <li><strong>Block Light</strong> - Light sources provide warmth</li>
+                    <li><strong>Water Proximity</strong> - Water/ice reduce temperature</li>
+                    <li><strong>Armor</strong> - Different armor provides warmth</li>
+                    <li><strong>Food Level</strong> - Hunger affects temperature tolerance</li>
+                    <li><strong>Movement</strong> - Sprinting generates body heat</li>
+                </ol>
+                <p><strong>Temperature Effects:</strong></p>
+                <ul class="effects-list">
+                    <li>❄️ <strong>Freezing</strong> (Below 0°C) - Damage + Slowness</li>
+                    <li>🔥 <strong>Burning</strong> (Above 35°C) - Damage + Fire Effect</li>
+                    <li>😋 <strong>Hunger</strong> - Increased by cold/heat</li>
+                    <li>✨ <strong>Visual Effects</strong> - Breath particles & sweat</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Calendar System -->
+        <div class="system-card">
+            <div class="system-header">
+                <h3>📅 Calendar System</h3>
+            </div>
+            <div class="system-content">
+                <ul class="calendar-features">
+                    <li>Realistic day/night cycles</li>
+                    <li>Variable day/night lengths per month</li>
+                    <li>Customizable days per month</li>
+                    <li>Real-world time synchronization (optional)</li>
+                    <li>American (MM/DD/YYYY) and International (DD/MM/YYYY) formats</li>
+                    <li>Named day-of-week tracking</li>
+                    <li>PlaceholderAPI ready</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Crop Growth System -->
+        <div class="system-card">
+            <div class="system-header">
+                <h3>🌾 Crop Growth System</h3>
+            </div>
+            <div class="system-content">
+                <div class="growth-rates">
+                    <div class="rate-item">
+                        <span class="season-label spring">Spring</span>
+                        <span class="rate-value">1.5x</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="season-label summer">Summer</span>
+                        <span class="rate-value">2.0x</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="season-label autumn">Autumn</span>
+                        <span class="rate-value">1.2x</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="season-label winter">Winter</span>
+                        <span class="rate-value">0.3x</span>
+                    </div>
+                </div>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Greenhouse support with optimal conditions</li>
+                    <li>Crop-specific seasonal suitability</li>
+                    <li>Growth tracking across seasons</li>
+                    <li>Lore system for harvested crops</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="commands">
+        <h2>Commands</h2>
+        <div class="commands-grid">
+            <div class="command-card">
+                <div class="command-header">
+                    <code>/season</code>
+                    <span class="perm-badge">betterseason.season</span>
+                </div>
+                <p class="command-desc">View current season and calendar information</p>
+                <div class="command-example">
+                    <strong>Output:</strong>
+                    <pre>========== BetterSeason Info ==========
+Currently: Summer
+Date: June 15, 2024
+Day: Monday
+Time: 14:30
+Temperature: 32.5°C
+========================================</pre>
+                </div>
+            </div>
+            <div class="command-card">
+                <div class="command-header">
+                    <code>/season set &lt;season&gt;</code>
+                    <span class="perm-badge admin">betterseason.season.set</span>
+                </div>
+                <p class="command-desc">Set the current season (admin only)</p>
+                <p class="command-note"><strong>Valid Seasons:</strong> SPRING, SUMMER, AUTUMN, WINTER</p>
+                <div class="command-example">
+                    <strong>Example:</strong>
+                    <code>/season set summer</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Permissions Section -->
+    <section class="permissions">
+        <h2>Permissions</h2>
+        <div class="perms-grid">
+            <div class="perm-card">
+                <code>betterseason.season</code>
+                <p>View current season information</p>
+                <span class="default">default: true</span>
+            </div>
+            <div class="perm-card">
+                <code>betterseason.season.set</code>
+                <p>Set the current season</p>
+                <span class="default admin">default: op</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="installation">
+        <h2>Installation</h2>
+        <div class="install-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Build the Plugin</h3>
+                    <p>Navigate to the plugin directory and compile using Maven:</p>
+                    <pre><code>cd BetterSeason
+mvn clean package</code></pre>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Deploy JAR File</h3>
+                    <p>Copy the compiled JAR to your server's plugins directory:</p>
+                    <pre><code>cp target/BetterSeason-1.0.0.jar /path/to/server/plugins/</code></pre>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Start Your Server</h3>
+                    <p>The server will generate a default config on first run. Edit as needed and restart:</p>
+                    <pre><code>plugins/BetterSeason/config.yml</code></pre>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Verify Installation</h3>
+                    <p>Join your server and run the command to verify:</p>
+                    <pre><code>/season</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configuration Section -->
+    <section id="config" class="configuration">
+        <h2>Configuration Examples</h2>
+        <div class="config-examples">
+            <div class="config-card">
+                <h3>Basic Configuration</h3>
+                <pre><code>enabled: true
+american-date-format: false
+sync-time-with-real-world: false
+
+temperature:
+  enabled: true
+  
+seasonal-effects:
+  enabled: true
+  crop-growth-modifiers:
+    SPRING: 1.5
+    SUMMER: 2.0
+    AUTUMN: 1.2
+    WINTER: 0.3</code></pre>
+            </div>
+            <div class="config-card">
+                <h3>Temperature Effects</h3>
+                <pre><code>temperature:
+  effects:
+    freezing-threshold: 0
+    freezing-damage: 2
+    burning-threshold: 35
+    burning-damage: 2
+    hunger-from-cold: true
+    hunger-from-heat: true
+    apply-slowness: true
+    apply-haste: false</code></pre>
+            </div>
+            <div class="config-card">
+                <h3>Season Modifiers</h3>
+                <pre><code>temperature:
+  season-modifiers:
+    SPRING:
+      min-temperature: 5
+      max-temperature: 23
+    SUMMER:
+      min-temperature: 25
+      max-temperature: 40
+    AUTUMN:
+      min-temperature: 5
+      max-temperature: 25
+    WINTER:
+      min-temperature: -10
+      max-temperature: 5</code></pre>
+            </div>
+            <div class="config-card">
+                <h3>Crop Growth Adjustment</h3>
+                <pre><code>seasonal-effects:
+  crop-growth-modifiers:
+    SPRING: 2.0
+    SUMMER: 3.0
+    AUTUMN: 1.5
+    WINTER: 0.5
+  greenhouse-enabled: true
+  greenhouse-optimal-growth: 3.0</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="technical">
+        <h2>Technical Details</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <h3>Threading Model</h3>
+                <ul>
+                    <li><strong>Season Rotation:</strong> Every in-game day (24000 ticks)</li>
+                    <li><strong>Temperature Effects:</strong> Every second (20 ticks)</li>
+                    <li><strong>Particle Spawning:</strong> Every 2 seconds (40 ticks)</li>
+                    <li>Asynchronous where possible</li>
+                </ul>
+            </div>
+            <div class="tech-card">
+                <h3>Data Persistence</h3>
+                <ul>
+                    <li>Season data saved to config on change</li>
+                    <li>Calendar state persisted between restarts</li>
+                    <li>Temperature calculations are real-time</li>
+                    <li>No database dependency</li>
+                </ul>
+            </div>
+            <div class="tech-card">
+                <h3>Compatibility</h3>
+                <ul>
+                    <li><strong>PlaceholderAPI:</strong> Ready for expansion</li>
+                    <li><strong>WorldGuard:</strong> Helper class support</li>
+                    <li><strong>Paper API:</strong> Latest features</li>
+                    <li><strong>Extensible:</strong> Custom modifiers</li>
+                </ul>
+            </div>
+            <div class="tech-card">
+                <h3>Performance</h3>
+                <ul>
+                    <li>Efficient chunk-based processing</li>
+                    <li>Particle effects limited to loaded chunks</li>
+                    <li>Lightweight temperature calculations</li>
+                    <li>Minimal memory footprint</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Structure -->
+    <section class="structure">
+        <h2>Project Structure</h2>
+        <div class="structure-container">
+            <pre><code>BetterSeason/
+├── pom.xml
+├── src/main/
+│   ├── java/com/betterseason/epicboat/
+│   │   ├── BetterSeason.java (Main plugin class)
+│   │   ├── commands/
+│   │   │   └── SeasonCommand.java
+│   │   ├── listeners/
+│   │   │   └── EventListeners.java
+│   │   ├── managers/
+│   │   │   ├── SeasonManager.java
+│   │   │   ├── CalendarManager.java
+│   │   │   ├── TemperatureManager.java
+│   │   │   └── temperature/modifiers/
+│   │   │       ├── TemperatureModifier.java
+│   │   │       ├── TemperatureCalculator.java
+│   │   │       ├── SeasonTemperatureModifier.java
+│   │   │       ├── BiomeTemperatureModifier.java
+│   │   │       ├── TimeTemperatureModifier.java
+│   │   │       └── ... (7 more modifiers)
+│   │   ├── services/
+│   │   │   ├── crop/
+│   │   │   ├── biome/
+│   │   │   └── flora/
+│   │   └── utils/
+│   │       ├── Season.java
+│   │       └── DateTimeUtil.java
+│   └── resources/
+│       ├── plugin.yml
+│       └── config.yml</code></pre>
+        </div>
+    </section>
+
+    <!-- Future Enhancements -->
+    <section class="roadmap">
+        <h2>Future Enhancements</h2>
+        <div class="roadmap-items">
+            <div class="roadmap-item">
+                <input type="checkbox" id="item1" disabled>
+                <label for="item1">Crop-specific seasonal recipes</label>
+            </div>
+            <div class="roadmap-item">
+                <input type="checkbox" id="item2" disabled>
+                <label for="item2">Dynamic NPC trading based on season</label>
+            </div>
+            <div class="roadmap-item">
+                <input type="checkbox" id="item3" disabled>
+                <label for="item3">Seasonal mob drops</label>
+            </div>
+            <div class="roadmap-item">
+                <input type="checkbox" id="item4" disabled>
+                <label for="item4">Weather event customization</label>
+            </div>
+            <div class="roadmap-item">
+                <input type="checkbox" id="item5" disabled>
+                <label for="item5">Full PlaceholderAPI integration</label>
+            </div>
+            <div class="roadmap-item">
+                <input type="checkbox" id="item6" disabled>
+                <label for="item6">WorldGuard support</label>
+            </div>
+            <div class="roadmap-item">
+                <input type="checkbox" id="item7" disabled>
+                <label for="item7">MySQL backend option</label>
+            </div>
+            <div class="roadmap-item">
+                <input type="checkbox" id="item8" disabled>
+                <label for="item8">Custom season creation</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BetterSeason</h4>
+                <p>Advanced Realistic Seasons Plugin for Minecraft</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#commands">Commands</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Plugin Info</h4>
+                <ul>
+                    <li>Author: <strong>epic_boat</strong></li>
+                    <li>Version: <strong>1.0.0</strong></li>
+                    <li>MC Version: <strong>1.21.8</strong></li>
+                    <li>License: <strong>GNU GPLv3</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BetterSeason - Happy seasoning! 🍂❄️🌸☀️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Summer Background -->
+  <defs>
+    <linearGradient id="summerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE4B5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="200" height="200" fill="url(#summerGrad)"/>
+  
+  <!-- Bright Sun -->
+  <circle cx="170" cy="30" r="25" fill="#FFD700"/>
+  <circle cx="170" cy="30" r="30" fill="#FFA500" opacity="0.3"/>
+  
+  <!-- Tree -->
+  <rect x="60" y="70" width="80" height="90" fill="#8B4513"/>
+  
+  <!-- Thick Green Foliage -->
+  <circle cx="70" cy="60" r="50" fill="#228B22" opacity="0.9"/>
+  <circle cx="140" cy="60" r="50" fill="#228B22" opacity="0.9"/>
+  <circle cx="100" cy="30" r="45" fill="#228B22" opacity="0.9"/>
+  
+  <!-- Heat Waves -->
+  <path d="M 20 150 Q 30 145 40 150" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M 160 140 Q 170 135 180 140" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.5"/>
+  
+  <!-- Ground -->
+  <ellipse cx="100" cy="195" rx="100" ry="8" fill="#DAA520" opacity="0.7"/>
+  
+  <!-- Label -->
+  <text x="100" y="185" font-size="12" font-weight="bold" text-anchor="middle" fill="#FF8C00">SUMMER</text>
+</svg>
