@@ -1,0 +1,985 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #3498db;
+    --dark-bg: #1a1a2e;
+    --light-bg: #16213e;
+    --accent-color: #e74c3c;
+    --text-color: #ecf0f1;
+    --muted-text: #bdc3c7;
+    --spring: #a8e6cf;
+    --summer: #ffd93d;
+    --autumn: #ff8c42;
+    --winter: #6bcfe6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(26, 26, 46, 0.95);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-item {
+    transition: transform 0.3s ease;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: 600px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--muted-text);
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    transform: translateY(-2px);
+}
+
+.plugin-info {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.badge {
+    background-color: var(--light-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(46, 204, 113, 0.2));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Sections Common */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+section > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section > h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+/* Features Section */
+.features {
+    background-color: var(--light-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: rgba(46, 204, 113, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.feature-card p {
+    color: var(--muted-text);
+    line-height: 1.6;
+}
+
+/* Systems Section */
+.systems {
+    background-color: var(--dark-bg);
+}
+
+.system-card {
+    background-color: var(--light-bg);
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.system-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(46, 204, 113, 0.15);
+}
+
+.system-header {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(52, 152, 219, 0.2));
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.system-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.system-content {
+    padding: 2rem;
+}
+
+.season-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.season-detail {
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.season-detail h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.season-detail p {
+    color: var(--muted-text);
+    font-size: 0.95rem;
+}
+
+/* Seasons Gallery */
+.seasons-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.season-card-img {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    transition: all 0.3s ease;
+}
+
+.season-card-img:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
+}
+
+.season-img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    margin-bottom: 0.8rem;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.season-card-img p {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.season-card-img p strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* System Diagram */
+.system-image {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.system-diagram {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    filter: drop-shadow(0 5px 15px rgba(46, 204, 113, 0.15));
+}
+
+.modifier-list, .effects-list, .calendar-features {
+    list-style-position: inside;
+    color: var(--muted-text);
+}
+
+.modifier-list li, .effects-list li, .calendar-features li {
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+.modifier-list li strong, .effects-list li strong {
+    color: var(--primary-color);
+}
+
+.growth-rates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.rate-item {
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.season-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+}
+
+.season-label.spring {
+    background-color: var(--spring);
+    color: #333;
+}
+
+.season-label.summer {
+    background-color: var(--summer);
+    color: #333;
+}
+
+.season-label.autumn {
+    background-color: var(--autumn);
+    color: white;
+}
+
+.season-label.winter {
+    background-color: var(--winter);
+    color: #333;
+}
+
+.rate-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Commands Section */
+.commands {
+    background-color: var(--light-bg);
+}
+
+.commands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.command-card {
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    transition: all 0.3s ease;
+}
+
+.command-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(46, 204, 113, 0.15);
+}
+
+.command-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.command-header code {
+    background-color: rgba(46, 204, 113, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-family: 'Courier New', monospace;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.perm-badge {
+    font-size: 0.75rem;
+    background-color: rgba(52, 152, 219, 0.3);
+    color: var(--secondary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+.perm-badge.admin {
+    background-color: rgba(231, 76, 60, 0.3);
+    color: var(--accent-color);
+}
+
+.command-desc {
+    color: var(--muted-text);
+    margin-bottom: 1rem;
+}
+
+.command-note {
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    border-left: 3px solid var(--secondary-color);
+    margin-bottom: 1rem;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.command-example {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+}
+
+.command-example strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.command-example pre {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+
+.command-example code {
+    background: none;
+    padding: 0;
+    color: var(--primary-color);
+    font-family: 'Courier New', monospace;
+}
+
+/* Permissions Section */
+.permissions {
+    background-color: var(--dark-bg);
+}
+
+.perms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.perm-card {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.perm-card code {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: var(--primary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+    font-family: 'Courier New', monospace;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.perm-card p {
+    color: var(--muted-text);
+    margin-bottom: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.perm-card .default {
+    background-color: rgba(52, 152, 219, 0.2);
+    color: var(--secondary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.perm-card .default.admin {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: var(--accent-color);
+}
+
+/* Installation Section */
+.installation {
+    background-color: var(--light-bg);
+}
+
+.install-steps {
+    display: grid;
+    gap: 2rem;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-bg);
+    position: sticky;
+    top: 100px;
+}
+
+.step-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.step-content p {
+    color: var(--muted-text);
+    margin-bottom: 0.8rem;
+}
+
+.step-content pre {
+    background-color: var(--dark-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.step-content code {
+    background: none;
+    color: var(--primary-color);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+/* Configuration Section */
+.configuration {
+    background-color: var(--dark-bg);
+}
+
+.config-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.config-card {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.config-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.config-card pre {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 0.3rem;
+    overflow-x: auto;
+}
+
+.config-card code {
+    background: none;
+    color: var(--secondary-color);
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+/* Technical Section */
+.technical {
+    background-color: var(--light-bg);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tech-card {
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.tech-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.tech-card ul {
+    list-style: none;
+}
+
+.tech-card li {
+    padding: 0.5rem 0;
+    color: var(--muted-text);
+    border-bottom: 1px solid rgba(46, 204, 113, 0.1);
+}
+
+.tech-card li:last-child {
+    border-bottom: none;
+}
+
+.tech-card strong {
+    color: var(--primary-color);
+}
+
+/* Project Structure */
+.structure {
+    background-color: var(--dark-bg);
+}
+
+.structure-container {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    overflow-x: auto;
+}
+
+.structure-container pre {
+    background: none;
+    color: var(--secondary-color);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+}
+
+.structure-container code {
+    background: none;
+    color: var(--secondary-color);
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+/* Roadmap Section */
+.roadmap {
+    background-color: var(--light-bg);
+}
+
+.roadmap-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.roadmap-item {
+    background-color: var(--dark-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.roadmap-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.roadmap-item label {
+    cursor: pointer;
+    color: var(--muted-text);
+    flex: 1;
+}
+
+.roadmap-item input[type="checkbox"]:checked + label {
+    color: var(--primary-color);
+    text-decoration: line-through;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(22, 33, 62, 0.95);
+    border-top: 2px solid var(--primary-color);
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    color: var(--muted-text);
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    color: var(--muted-text);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a {
+    color: var(--muted-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.footer-section li:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(46, 204, 113, 0.2);
+    padding: 2rem;
+    text-align: center;
+    color: var(--muted-text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    section > h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid,
+    .commands-grid,
+    .perms-grid,
+    .tech-grid,
+    .roadmap-items {
+        grid-template-columns: 1fr;
+    }
+
+    .season-display {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .season-icon {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .step {
+        grid-template-columns: 1fr;
+    }
+
+    .step-number {
+        position: static;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    section > h2 {
+        font-size: 1.5rem;
+    }
+
+    .season-display {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .season-icon {
+        font-size: 2.5rem;
+    }
+
+    .plugin-info {
+        flex-direction: column;
+    }
+
+    .badge {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Scroll Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
